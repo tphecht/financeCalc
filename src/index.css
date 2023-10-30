@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+main {
+  padding: 36px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background: linear-gradient(90deg, #636dfa 1.18%, #4639f7 100%);
+  color: white;
+  padding: 20px;
+}
+
+.header--image {
+  height: 100%;
+  margin-left: auto;
+  margin-right: 6px;
+}
+
+.header--title {
+  font-size: 1.25rem;
+  margin-right: auto;
+}
+
+.form {
+  display: grid;
+  grid-template: 20px 20px / 2fr 1fr;
+  gap: 15px;
+  margin: auto;
+  margin-bottom: 17px;
+  max-width: 600px;
+  border: 1px solid #4639f7;
+  border-radius: 6px;
+  padding: 20px
+}
+
+.form--section,
+.form--total {
+  color: #4639f7;
+}
+
+.form--total {
+  margin-left: auto;
+}
+
+.form--section,
+.form--subSection,
+.form--total {
+  font-weight: bold;
+}
+
+.form--input {
+  font-family: "Inter", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+}
+
+.form--output {
+  font-family: "Inter", sans-serif;
+  text-indent: 5px;
+}
+
+.input--label {
+  margin-left: 15px
+}
+
+div.dollar {
+  position: relative;
+}
+
+div.dollar input,
+div.dollar div {
+  padding-left: 15px;
+}
+
+div.dollar:after {
+  position: absolute;
+  left: 6px;
+  bottom: 1px;
+  content: '$';
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
