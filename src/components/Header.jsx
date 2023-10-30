@@ -1,8 +1,9 @@
+import reactLogo from '../assets/react.svg'
 export default function Header() {
     return (
         <header className="header">
             <img
-                src="./src/assets/react.svg"
+                src={reactLogo}
                 className="header--image"
             />
             <h2 className="header--title">Finance Calculator</h2>
