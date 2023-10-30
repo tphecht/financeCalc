@@ -4,7 +4,7 @@ import Header from './components/Header'
 
 function App() {
   const [finances, setFinances] = useState({
-    totalCash: 0.00,
+    assets: 0.00,
     currentLiabilities: 0.00,
     longTermLiabilities: 0.00,
     totalLiabilities: 0.00,
@@ -19,25 +19,11 @@ function App() {
   }, [finances]);
 
   function updateTotal(totalAmount, category) {
-    let totalName = ""
-    switch (category) {
-      case 'assets':
-        totalName = "totalCash"
-        break;
-      case 'currentLiabilities':
-        totalName = "currentLiabilities"
-        break;
-      case 'longTermLiabilities':
-        totalName = "longTermLiabilities"
-        break;
-      default:
-        return null
-    }
 
     setFinances(prevState => {
       return {
         ...prevState,
-        [totalName]: totalAmount
+        [category]: totalAmount
       }
     })
 
@@ -55,7 +41,7 @@ function App() {
           <FinanceInputList category="assets" updateTotal={updateTotal} />
           <div className='form--total'>Total cash $</div>
           <div className='dollar'>
-            <div className='form--output'>{parseFloat(finances.totalCash).toFixed(2)}</div>
+            <div className='form--output'>{parseFloat(finances.assets).toFixed(2)}</div>
           </div>
         </div>
         <div className='form'>
@@ -73,7 +59,7 @@ function App() {
           </div>
           <div className='form--total'>Total Value $</div>
           <div className='dollar'>
-            <div className='form--output'>{(parseFloat(finances.totalCash) - (parseFloat(finances.currentLiabilities) + parseFloat(finances.longTermLiabilities))).toFixed(2)}</div>
+            <div className='form--output'>{(parseFloat(finances.assets) - (parseFloat(finances.currentLiabilities) + parseFloat(finances.longTermLiabilities))).toFixed(2)}</div>
           </div>
         </div>
       </main>
