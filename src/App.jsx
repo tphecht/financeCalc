@@ -11,12 +11,12 @@ function App() {
     totalValue: 0.00
   })
 
-  useEffect(() => {
-    console.log(finances)
-    if (finances) {
-      updateTotal();
-    }
-  }, [finances]);
+  // useEffect(() => {
+  //   console.log(finances)
+  //   if (finances) {
+  //     updateTotal();
+  //   }
+  // }, [finances]);
 
   function updateTotal(totalAmount, category) {
 
