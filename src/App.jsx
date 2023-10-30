@@ -32,7 +32,7 @@ function App() {
           <div className='form--subSection'>Cash and cash equivalents</div>
           <br />
           <FinanceInputList category="assets" updateTotal={updateTotal} />
-          <div className='form--total'>Total cash $</div>
+          <div className='form--total'>Total cash</div>
           <div className='dollar'>
             <div className='form--output'>{parseFloat(finances.assets).toFixed(2)}</div>
           </div>
@@ -46,11 +46,11 @@ function App() {
           <div className='form--subSection'>Long-term</div>
           <br />
           <FinanceInputList category="longTermLiabilities" updateTotal={updateTotal} />
-          <div className='form--total'>Total Liabilities $</div>
+          <div className='form--total'>Total Liabilities</div>
           <div className='dollar'>
             <div className='form--output'>{(parseFloat(finances.currentLiabilities) + parseFloat(finances.longTermLiabilities)).toFixed(2)}</div>
           </div>
-          <div className='form--total'>Total Value $</div>
+          <div className='form--total'>Total Value</div>
           <div className='dollar'>
             <div className='form--output'>{(parseFloat(finances.assets) - (parseFloat(finances.currentLiabilities) + parseFloat(finances.longTermLiabilities))).toFixed(2)}</div>
           </div>
