@@ -28,7 +28,7 @@ function App() {
       <main>
         <div className='form'>
           <div className='form--section'>Assets</div>
-          <div className='form--section'>Current Value</div>
+          <div className='form--section large-only'>Current Value</div>
           <div className='form--subSection'>Cash and cash equivalents</div>
           <br />
           <FinanceInputList category="assets" updateTotal={updateTotal} />
@@ -39,7 +39,7 @@ function App() {
         </div>
         <div className='form'>
           <div className='form--section'>Liabilities</div>
-          <div className='form--section'>Current amount due</div>
+          <div className='form--section large-only'>Current amount due</div>
           <div className='form--subSection'>Current</div>
           <br />
           <FinanceInputList category="currentLiabilities" updateTotal={updateTotal} />
